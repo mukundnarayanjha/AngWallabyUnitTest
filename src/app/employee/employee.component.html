@@ -1,0 +1,102 @@
+<!-- Action performed successfully! -->
+<div [hidden]="!submitted">
+    <h6 id ="notify" class="text-center" appTextColor>Action performed successfully!</h6>
+</div>
+<table style="width: auto;">
+    <tr style="width: auto;">
+        <td style="width:300px">
+            <h6 class="mb-3 text-center">Employees List</h6>
+            <table class="table-bordered">
+                <thead>
+                    <tr style="font-size: 10px;">
+                        <th>User Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employees">
+                        <td>{{employee.id}}</td>
+                        <td>{{employee.name | toLowerPipe}}</td>
+                        <td>{{employee.email}}</td>
+                        <td>{{employee.phone}}</td>
+                        <td>
+                            <a class="edit" (click)="getEmployeeId(employee.id)">Select</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td style="width: 400px;">
+            <table class="table-bordered">
+                <tr>
+                    <td style="width: 350px;">
+                        <form [formGroup]="employeeForm" novalidate class="login-container">
+
+                            <div class="form-group" *ngIf="showIdControl">
+                                <input type="text" formControlName="id" disabled id="id" class="form-control"
+                                    placeholder="id">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" formControlName="name" disabled id="name" class="form-control"
+                                    placeholder="Name">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" formControlName="email" disabled id="email" class="form-control"
+                                    placeholder="Email">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" formControlName="phone" disabled id="phone" class="form-control"
+                                    placeholder="Phone">
+                            </div>
+
+                            <div class="form-group">
+                                <div *ngIf="ShowAddPerson">
+                                    <button id="EUOAdd" type="submit" [disabled]="!Disabled"
+                                        (click)=EUOSaveButtonClick(); class="btn btn-success btn-sm btn-block">Add
+                                        Employee to Observation</button>
+                                </div>
+                                <div *ngIf="!ShowAddPerson">
+                                    <button id="EUORemove" type="submit" [disabled]="!Disabled"
+                                        (click)=EUORemoveButtonClick(); class="btn btn-success btn-sm btn-block">Remove
+                                        Employee from Observation
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+        <td style="width: 300px;">
+            <h6 class="text-center">Employees Observation List</h6>
+            <table class="table-bordered">
+                <thead>
+                    <tr style="font-size: 10px;">
+                        <th>User Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of observationEmployees">
+                        <td>{{employee.id}}</td>
+                        <td>{{employee.name | toLowerPipe}}</td>
+                        <td>{{employee.email}}</td>
+                        <td>{{employee.phone}}</td>
+                        <td>
+                            <a class="edit" (click)="getUnderObservationEmployeeId(employee.id)">Add</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>

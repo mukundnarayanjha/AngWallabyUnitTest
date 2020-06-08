@@ -1,0 +1,56 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+      }
+    ],
+    "signup": [
+      {
+        "id": 2,
+        "name": "Surendra",
+        "email": "surendra@gmail.com",
+        "address": "Reva",
+        "password": "1230121"
+      },
+      {
+        "id": 3,
+        "name": "Surendra",
+        "email": "surendra.dwivedi@gmail.com",
+        "address": "US",
+        "password": "1230121"
+      },
+      {
+        "id": 7,
+        "name": "Surendra",
+        "email": "surendra.dwivedi@yaho0.com",
+        "address": "kolkata",
+        "password": "1230121"
+      },
+      {
+        "id": 8,
+        "name": "sanket sawant",
+        "email": "s@gmail.com",
+        "address": "Delhi",
+        "password": "123"
+      },
+      {
+        "id": 10,
+        "name": "Rohit Hulle",
+        "email": "sur@gmail.com",
+        "address": "Kolhapur",
+        "password": "1230121"
+      }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }

@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-sm-8">
+    <div class="card">
+      <div class="card-body">
+        <div class="container custom-container-2">
+          <!-- Show it when there is no employee -->
+          <div class="no-data text-center" *ngIf="employees.length == 0">
+            <p>There is no employee added yet!</p>
+            <button class="btn btn-outline-primary" routerLink="/create-employee">Add Empoyee</button>
+          </div>
+        
+          <!-- Employees list table, it hides when there is no employee -->
+          <div *ngIf="employees.length !== 0">
+            <h5 class="mb-3 text-center">Employees List</h5>
+        
+            <div class="col-md-12">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">User Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let employee of employees">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.email}}</td>
+                    <td>{{employee.phone}}</td>
+                    <td>
+                      <a class="edit" (click)="getEmployeeId(employee.id)">Edit</a>
+                      <a class="delete" (click)="deleteEmployee(employee.id)">Delete</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>        
+          </div>        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+          <app-employee-edit [employeeData] = employee (loadUpdateEmployeeFun)="loadEmployees()"></app-employee-edit>
+      </div>
+    </div>
+  </div>
+</div>
+

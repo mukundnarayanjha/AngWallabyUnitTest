@@ -1,0 +1,26 @@
+<div class="container custom-container">
+  <div class="col-md-12">
+    <div [hidden]="!submitted">
+      <h6 class="mb-6 text-center" style="color: green;">Update successfully!</h6>
+      <hr>
+   </div>
+    <h5 class="mb-3 text-center">Update Employee</h5>
+    <form [formGroup]="employeeUpdateForm" novalidate (ngSubmit)="updateEmployee()" class="login-container">
+    <div class="form-group">
+      <input type="text" formControlName="name" id="name" class="form-control"  placeholder="Name">
+    </div>
+
+    <div class="form-group">
+      <input type="text" formControlName="email" id="email" class="form-control"  placeholder="Email">       
+    </div>
+
+    <div class="form-group">
+      <input type="text" formControlName="phone" id="phone" class="form-control"  placeholder="Phone">
+    </div>
+
+    <div class="form-group">
+      <button id="update" type="submit" class="btn btn-success btn-lg btn-block" (click)="updateEmployee()">Update Employee</button>
+    </div>
+    </form>
+  </div>
+</div>

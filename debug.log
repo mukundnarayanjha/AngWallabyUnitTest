@@ -1,0 +1,7 @@
+[0503/155214.121:ERROR:crash_report_database_win.cc(580)] CreateDirectory C:\Users\Mukund\AppData\Local\Temp\karma-37374801\Crashpad: The system cannot find the path specified. (0x3)
+[0503/155214.290:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0503/155214.384:ERROR:crash_report_database_win.cc(580)] CreateDirectory C:\Users\Mukund\AppData\Local\Temp\karma-37374801\Crashpad: The system cannot find the path specified. (0x3)
+[0512/165411.144:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0513/165411.751:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0514/165412.301:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0515/165412.860:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports

@@ -1,0 +1,36 @@
+{
+  "employees": [
+    {
+      "name": "Pankaj Jha",
+      "email": "pankajjha89@gmail.com",
+      "phone": "09004185506",
+      "id": 3
+    },
+    {
+      "name": "Mukund Jha",
+      "email": "mukundnarayanjha@outlook.com",
+      "phone": "09004185506",
+      "id": 4
+    }
+  ],
+  "employeesUnderObservation": [
+    {
+      "name": "Mukund Jha",
+      "email": "mukundnarayanjha@outlook.com",
+      "phone": "09004185506",
+      "id": 1
+    },
+    {
+      "name": "Pankaj Jha",
+      "email": "pankajjha89@gmail.com",
+      "phone": "09004185506",
+      "id": 2
+    },
+    {
+      "name": "Mukund",
+      "email": "mukund@gmail.com",
+      "phone": 9004186606,
+      "id": 3
+    }
+  ]
+}
